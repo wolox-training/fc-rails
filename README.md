@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-[![Build Status](https://travis-ci.org/travis-ci/travis-web.svg)](https://travis-ci.org/travis-ci/travis-web)
+[![Build Status](https://travis-ci.org/wolox-training/fc-rails.svg?branch=master)](https://travis-ci.org/wolox-training/fc-rails)
