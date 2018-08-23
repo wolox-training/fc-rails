@@ -1,5 +1,0 @@
-Documentation:
-   Enabled: false
-LineLength:
-   Max: 99
-- Como todas las gemas que vas a estar usando, hay que agregarla al `Gemfile` en el group que corresponda y correr `bundle install`
