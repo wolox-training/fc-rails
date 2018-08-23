@@ -1,4 +1,4 @@
 Documentation:
    Enabled: false
 LineLength:
-   Max: 9999
+   Enabled: false
