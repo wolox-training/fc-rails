@@ -3,6 +3,5 @@ Documentation:
 LineLength:
    Enabled: false
 AllCops:
-   TargetRubyVersion: 2.5
    Exclude:
      - 'bin/**/*'
