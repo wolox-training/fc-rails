@@ -52,6 +52,8 @@ group :development, :test do
   gem 'database_cleaner'
 
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
+  gem 'factory_bot'
 end
 
 group :development do
