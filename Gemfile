@@ -48,6 +48,10 @@ group :development, :test do
   gem 'rubocop', '~> 0.58.2', require: false
 
   gem 'rspec-rails', '~> 3.7'
+
+  gem 'database_cleaner'
+
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :development do
