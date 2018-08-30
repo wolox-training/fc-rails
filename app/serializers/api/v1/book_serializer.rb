@@ -1,3 +1,7 @@
-class Api::V1::BookSerializer < ActiveModel::Serializer
-  attributes :id
+module Api
+  module V1
+    class BookSerializer < ActiveModel::Serializer
+      attributes :id
+    end
+  end
 end
