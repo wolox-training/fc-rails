@@ -46,6 +46,14 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 
   gem 'rubocop', '~> 0.58.2', require: false
+
+  gem 'rspec-rails', '~> 3.7'
+
+  gem 'database_cleaner'
+
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
+  gem 'factory_bot'
 end
 
 group :development do
