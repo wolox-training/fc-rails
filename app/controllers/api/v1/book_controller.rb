@@ -2,7 +2,8 @@ module Api
   module V1
     class BookController < Api::V1::ApiController
       def index
-        render plain: "OK"
+        @books = Book.all
+        render json: @books
       end
     end
   end
