@@ -3,7 +3,7 @@ module Api
     class BookController < Api::V1::ApiController
       def index
         @books = Book.all
-        render json: @books
+        render_paginated json: @books
       end
       def show
         @book = Book.find(params[:id])
