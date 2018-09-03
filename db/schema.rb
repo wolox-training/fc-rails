@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_08_29_190310) do
-=======
-ActiveRecord::Schema.define(version: 2018_08_31_151032) do
->>>>>>> instalar-devise-crear-user-con-token-routes
+ActiveRecord::Schema.define(version: 2018_09_03_134102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
