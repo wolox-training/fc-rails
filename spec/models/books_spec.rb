@@ -2,17 +2,8 @@ require 'rails_helper'
 
 describe Book, type: :model do
   subject(:book) do
-    Book.new(
-      genre: genre, author: author, image: image, title: title, publisher: publisher, year: year
-    )
+    FactoryBot.build(:book, publisher: nil, year: nil)
   end
-
-  let(:genre)     { 'Terror' }
-  let(:author)    { 'Stephen King' }
-  let(:image)     { 'it.jpg' }
-  let(:title)     { 'It' }
-  let(:publisher) { nil }
-  let(:year)      { nil }
 
   describe '#create' do
     context 'When publisher is nil' do
