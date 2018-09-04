@@ -10,6 +10,12 @@ module Api
         @book = Book.find(params[:id])
         render json: @book
       end
+
+      private
+
+      def books_params
+        params.permit(:id)
+      end
     end
   end
 end
