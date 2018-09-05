@@ -2,19 +2,17 @@ module Api
   module V1
     class BookController < ApiController
       def index
-        @books = Book.all
-        render_paginated json: @books
+        render json: Book.all
       end
 
       def show
-        @book = Book.find(params[:id])
-        render json: @book
+        render json: Book.find(books_params)
       end
 
       private
 
       def books_params
-        params.permit(:id)
+        params.permit(:id)["id"]
       end
     end
   end
