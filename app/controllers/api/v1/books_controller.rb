@@ -12,7 +12,7 @@ module Api
       private
 
       def books_params
-        params.permit(:id)["id"]
+        params.permit(:id)['id']
       end
     end
   end
