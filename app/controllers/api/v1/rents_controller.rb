@@ -15,7 +15,7 @@ module Api
       def rents_create_params
         params.permit(:user_id, :book_id, :from, :to)
       end
-      
+
       def rents_index_params
         params.permit(:user_id)
       end
