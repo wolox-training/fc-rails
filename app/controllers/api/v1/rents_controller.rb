@@ -8,12 +8,7 @@ module Api
           'from': params[:from],
           'to': params[:to]
         )
-        # response = {
-        #   'rent': rent,
-        #   'book': Book.find_by_id(params[:book_id]),
-        #   'user': User.find_by_id(params[:user_id])
-        # }
-        render json: rent#RentsController.new(rent)
+        render json: rent
       end
 
       private
