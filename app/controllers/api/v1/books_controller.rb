@@ -1,6 +1,6 @@
 module Api
   module V1
-    class BookController < ApiController
+    class BooksController < ApiController
       def index
         render json: Book.all
       end
