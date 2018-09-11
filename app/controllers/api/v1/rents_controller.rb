@@ -4,9 +4,9 @@ module Api
       def create
         rent = Rent.create(rents_create_params)
 
-        if rent.save
-          ModelGeneratorMailer.new_rent_notification(rent).deliver
-        end
+       if rent.save
+         SendMailWorker.perform_async(rent.id)
+       end
 
         render json: rent
       end
