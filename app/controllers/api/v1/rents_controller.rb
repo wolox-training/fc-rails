@@ -3,10 +3,7 @@ module Api
     class RentsController < ApiController
       def create
         rent = Rent.create(rents_create_params)
-
-        if rent.save
-          SendMailWorker.perform_async(rent.id)
-        end
+        SendMailWorker.perform_async(rent.id) if rent.save
 
         render json: rent
       end
