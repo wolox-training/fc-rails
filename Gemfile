@@ -63,7 +63,10 @@ group :development, :test do
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
   gem 'factory_bot'
+
   gem 'factory_bot_rails'
+
+  gem 'dotenv-rails'
 end
 
 group :development do
