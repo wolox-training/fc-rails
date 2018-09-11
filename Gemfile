@@ -48,6 +48,10 @@ gem 'active_model_serializers', '~> 0.10.7'
 
 gem 'wor-paginate', '0.1.3'
 
+gem 'sidekiq', '~> 5.2', '>= 5.2.1'
+
+gem 'redis', '~> 4.0', '>= 4.0.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -61,7 +65,10 @@ group :development, :test do
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
   gem 'factory_bot'
+
   gem 'factory_bot_rails'
+
+  gem 'dotenv-rails'
 end
 
 group :development do
