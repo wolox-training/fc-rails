@@ -3,6 +3,11 @@ module Api
     class RentsController < ApiController
       def create
         rent = Rent.create(rents_create_params)
+
+        if rent.save
+          ModelGeneratorMailer.new_rent_notification(rent).deliver
+        end
+
         render json: rent
       end
 
@@ -15,7 +20,7 @@ module Api
       def rents_create_params
         params.permit(:user_id, :book_id, :from, :to)
       end
-      
+
       def rents_index_params
         params.permit(:user_id)
       end
