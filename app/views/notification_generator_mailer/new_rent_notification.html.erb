@@ -1,12 +1,12 @@
-<h1>Detalle de alquiler de libro:</h1>
+<h1><h1><%= t :mail_notification_title %>:</h1></h1>
 
-<p>Detalles del libro:
-  <p>Genero: <%= @rent.book.genre %></p>
-  <p>Autor: <%= @rent.book.author %></p>
-  <p>Titulo: <%= @rent.book.title %></p>
-  <p>Publicado por: <%= @rent.book.publisher %></p>
-  <p>Año de publicacion: <%= @rent.book.year %></p>
+<p><%= t :book_details %>:
+  <p><%= t :gender %>: <%= @rent.book.genre %></p>
+  <p><%= t :author %>: <%= @rent.book.author %></p>
+  <p><%= t :title %>: <%= @rent.book.title %></p>
+  <p><%= t :publisher %>: <%= @rent.book.publisher %></p>
+  <p><%= t :year_of_publication %>: <%= @rent.book.year %></p>
  </p>
-<p>Fecha inicio del alquiler: <%= @rent.from.strftime("%-d/%-m/%Y") %></p>
-<p>Fecha fin del alquiler: <%= @rent.to.strftime("%-d/%-m/%Y") %></p>
-<p>Fecha actual de creación del Rent: <%= @rent.created_at.strftime("%-d/%-m/%Y %H:%M") %></p>
+<p><%= t :rental_start_date %>: <%= @rent.from.strftime("%-d/%-m/%Y") %></p>
+<p><%= t :rental_end_date %>: <%= @rent.to.strftime("%-d/%-m/%Y") %></p>
+<p><%= t :current_date_of_creation_of_the_rent %>: <%= @rent.created_at.strftime("%-d/%-m/%Y %H:%M") %></p>
