@@ -1,6 +1,7 @@
 class NotificationGeneratorMailer < ApplicationMailer
   def new_rent_notification
     @rent = params[:rent]
-    mail to: @rent.user.email, subject: 'Acabas de alquilar un libro!!.'
+    I18n.locale = @rent.user.locale
+    mail to: @rent.user.email, subject: t('mail_notification_subject')
   end
 end
