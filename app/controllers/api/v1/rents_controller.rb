@@ -3,8 +3,7 @@ module Api
     class RentsController < ApiController
       def create
         rent = Rent.create(rents_create_params)
-        SendMailWorker.perform_async(rent.id) if rent.save
-
+        NotificationGeneratorMailer.with(rent: rent).new_rent_notification.deliver_later if rent.save
         render json: rent
       end
 
