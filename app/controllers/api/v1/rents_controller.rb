@@ -2,6 +2,8 @@ module Api
   module V1
     class RentsController < ApiController
       def create
+        book = Book.find(rents_create_params["book_id"])
+        authorize book
         rent = Rent.create(rents_create_params)
         NotificationGeneratorMailer.with(rent: rent).new_rent_notification.deliver_later if rent.save
         render json: rent
