@@ -2,8 +2,8 @@ module Api
   module V1
     class BookSuggestionsController < ApiController
       def create
-        bookSuggestion = BookSuggestion.new(book_suggestions_create_params)
-        bookSuggestion.save!
+        book_suggestion = BookSuggestion.new(book_suggestions_create_params)
+        book_suggestion.save!
         render json: bookSuggestion
       end
 
