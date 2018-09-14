@@ -2,7 +2,7 @@ module Api
   module V1
     class RentsController < ApiController
       def create
-        book = Book.find(rents_create_params["book_id"])
+        book = Book.find(rents_create_params['book_id'])
         authorize book
         rent = Rent.new(rents_create_params)
         rent.save!
