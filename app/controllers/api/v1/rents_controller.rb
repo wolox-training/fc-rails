@@ -2,7 +2,8 @@ module Api
   module V1
     class RentsController < ApiController
       def create
-        rent = Rent.create(rents_create_params)
+        rent = Rent.new(rents_create_params)
+        rent.save!
         render json: rent
       end
 
