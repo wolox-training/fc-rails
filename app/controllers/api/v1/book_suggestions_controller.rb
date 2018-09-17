@@ -4,7 +4,7 @@ module Api
       def create
         book_suggestion = BookSuggestion.new(book_suggestions_create_params)
         book_suggestion.save!
-        render json: bookSuggestion
+        render json: book_suggestion
       end
 
       private
