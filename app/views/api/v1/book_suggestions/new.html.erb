@@ -1,12 +1,47 @@
 <script type="text/javascript">
   $(document).ready(function() {
     $('.btn_create_book_suggestion').click(function() {
-      alert('Apreto boton crear nueva sugerencia.');
+      $.post('/api/v1/book_suggestions/new',
+        { author: $('#author').val(),
+          title: $('#title').val(),
+          link: $('#link').val(),
+          editorial: $('#editorial').val(),
+          publisher: $('#publisher').val(),
+          year: $('#year').val(),
+          price: $('#price').val(),
+          user_id: 1
+        },
+        function() {
+          location.reload();
+        }
+      );
     });
   });
 </script>
 
 <div>
-  <div>Nueva sugerencia de libros</div>
+  <h1>Nueva sugerencia de libros</h1>
+
+  <label for="author">Autor:</label>
+  <input id="author" name="author" type="text" /><br><br>
+
+  <label for="title">Titulo:</label>
+  <input id="title" name="title" type="text" /><br><br>
+
+  <label for="link">Link:</label>
+  <input id="link" name="link" type="text" /><br><br>
+
+  <label for="editorial">Editorial:</label>
+  <input id="editorial" name="editorial" type="text" /><br><br>
+
+  <label for="publisher">Publicado por:</label>
+  <input id="publisher" name="publisher" type="text" /><br><br>
+
+  <label for="year">Año de publicacion:</label>
+  <input id="year" name="year" type="text" /><br><br>
+
+  <label for="price">Precio:</label>
+  <input id="price" name="price" type="text" /><br><br>
+
   <button class='btn_create_book_suggestion'>Crear nueva sugerencia de libro.</button>
 </div>
