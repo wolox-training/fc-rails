@@ -13,6 +13,9 @@ module Api
         create_new_book_suggestion
       end
 
+      def new
+      end
+
       private
 
       def book_suggestions_create_params
