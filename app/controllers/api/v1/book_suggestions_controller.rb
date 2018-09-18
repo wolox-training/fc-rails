@@ -13,8 +13,7 @@ module Api
         create_new_book_suggestion
       end
 
-      def new
-      end
+      def new; end
 
       private
 
