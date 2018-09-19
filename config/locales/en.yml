@@ -1,12 +1,15 @@
 en:
-  mail_notification_subject: 'You just rent a book!!.'
-  mail_notification_title: 'Book rental detail'
-  book_details: 'Book details'
-  gender: 'Gender'
-  author: 'Author'
-  title: 'Title'
-  publisher: 'Published by'
-  year_of_publication: 'Year of publication'
-  rental_start_date: 'Rental start date'
-  rental_end_date: 'Renta end date'
-  current_date_of_creation_of_the_rent: 'Current date of creation of the rent'
+  mail_notification:
+    subject: 'You just rent a book!!.'
+    title: 'Book rental detail'
+  book:
+    details: 'Book details'
+    gender: 'Gender'
+    author: 'Author'
+    title: 'Title'
+    publisher: 'Published by'
+    year_of_publication: 'Year of publication'
+  rent:
+    start_date: 'Rental start date'
+    end_date: 'Renta end date'
+    current_date_of_creation: 'Current date of creation of the rent'
