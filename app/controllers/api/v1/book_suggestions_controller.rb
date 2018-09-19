@@ -9,8 +9,6 @@ module Api
         render json: book_suggestion
       end
 
-      def new; end
-
       private
 
       def book_suggestions_create_params
