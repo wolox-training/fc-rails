@@ -5,9 +5,13 @@ module Api
         book = Book.find(rents_create_params['book_id'])
         authorize book
         rent = Rent.new(rents_create_params)
-        rent.save!
-        NotificationGeneratorMailer.with(rent: rent).new_rent_notification.deliver_later if rent.save
-        render json: rent
+
+        if rent.save
+          NotificationGeneratorMailer.with(rent: rent).new_rent_notification.deliver_later
+          render json: rent
+        else
+          render json: { errors: rent.errors }, status: :bad_request
+        end
       end
 
       def index
