@@ -1,7 +1,7 @@
 <script type="text/javascript">
   $(document).ready(function() {
     $('.btn_create_book_suggestion').click(function() {
-      $.post('/api/v1/book_suggestions/new',
+      $.post('/api/v1/book_suggestions',
         { author: $('#author').val(),
           title: $('#title').val(),
           link: $('#link').val(),
