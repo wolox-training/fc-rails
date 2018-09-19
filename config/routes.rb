@@ -5,7 +5,6 @@ Rails.application.routes.draw do
       resources :users do
         resources :rents, only: [:create, :index]
       end
-      #resources :rents, only: [:create, :index], path: 'users/:user_id/rents'
       mount_devise_token_auth_for 'User', at: 'users/sessions', controllers: { sessions: "api/v1/devise_token_auth_custom/sessions" }
     end
   end
