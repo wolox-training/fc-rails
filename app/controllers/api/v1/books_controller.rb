@@ -6,13 +6,13 @@ module Api
       end
 
       def show
-        render json: Book.find(books_params)
+        render json: Book.find(books_params['id'])
       end
 
       private
 
       def books_params
-        params.permit(:id)['id']
+        params.permit(:id)
       end
     end
   end
