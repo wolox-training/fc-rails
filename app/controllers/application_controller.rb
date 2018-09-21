@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   include Pundit
   include Wor::Paginate
-  rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found_error
   rescue_from Pundit::NotAuthorizedError, with: :render_not_authorized_error
 
   def current_user
@@ -10,9 +9,5 @@ class ApplicationController < ActionController::Base
 
   def render_not_authorized_error
     render json: { message: 'Not authorized to perform the action' }, status: :forbidden
-  end
-
-  def render_record_not_found_error
-    render json: { message: 'Resource not found' }, status: :not_found
   end
 end
