@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'books/search_by_isbn', to: 'books#search_by_isbn'
+      get 'books/finding_books', to: 'books#finding_books'
       resources :books, only: [:show, :index]
       resources :book_suggestions, only: [:create, :new]
       resources :users do
