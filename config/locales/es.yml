@@ -1,12 +1,15 @@
 es:
-  mail_notification_subject: 'Acabas de alquilar un libro!!.'
-  mail_notification_title: 'Detalle de alquiler de libro'
-  book_details: 'Detalles del libro'
-  gender: 'Genero'
-  author: 'Autor'
-  title: 'Titulo'
-  publisher: 'Publicado por'
-  year_of_publication: 'Año de publicacion'
-  rental_start_date: 'Fecha inicio del alquiler'
-  rental_end_date: 'Fecha fin del alquiler'
-  current_date_of_creation_of_the_rent: 'Fecha actual de creación del Rent'
+  mail_notification:
+    subject: 'Acabas de alquilar un libro!!.'
+    title: 'Detalle de alquiler de libro'
+  book:
+    details: 'Detalles del libro'
+    gender: 'Genero'
+    author: 'Autor'
+    title: 'Titulo'
+    publisher: 'Publicado por'
+    year_of_publication: 'Año de publicacion'
+  rent:
+    start_date: 'Fecha inicio del alquiler'
+    end_date: 'Fecha fin del alquiler'
+    current_date_of_creation: 'Fecha actual de creación del Rent'
