@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   namespace :api do
     namespace :v1 do
+      get 'books/search_by_isbn', to: 'books#search_by_isbn'
       resources :books, only: [:show, :index]
       resources :book_suggestions, only: [:create, :new]
       resources :users do
