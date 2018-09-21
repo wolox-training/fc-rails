@@ -1,6 +1,8 @@
 module Api
   module V1
     class BooksController < ApiController
+      skip_before_action :authenticate_api_v1_user!, only: %i[finding_books search_by_isbn]
+
       def index
         render_paginated Book.all
       end
