@@ -1,5 +1,6 @@
 module Users
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+    # rubocop:disable AbcSize
     def google_oauth2
       user = User.from_omniauth(request.env['omniauth.auth'])
 
@@ -11,5 +12,6 @@ module Users
         redirect_to new_user_registration_url, alert: user.errors.full_messages.join("\n")
       end
     end
+    # rubocop:enable AbcSize
   end
 end
