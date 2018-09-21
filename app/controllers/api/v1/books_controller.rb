@@ -9,6 +9,16 @@ module Api
         render json: Book.find(books_params['id'])
       end
 
+      def search_by_isbn
+        open_library_service = OpenLibraryService.new
+        book = open_library_service.book_info(params['isbn'])
+        if !book.empty?
+          render json: book
+        else
+          render json: { errors: 'ISBN doesn\'t exists.' }, status: :bad_request
+        end
+      end
+
       private
 
       def books_params
