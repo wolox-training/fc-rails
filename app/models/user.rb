@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   devise :omniauthable, omniauth_providers: [:google_oauth2]
 
-  # rubocop:disable AbcSize
+  # rubocop:disable UnneededCopDisableDirective, AbcSize
   def self.from_omniauth(access_token)
     data = access_token.info
     user = User.find_by email: data['email']
@@ -18,5 +18,5 @@ class User < ApplicationRecord
 
     user
   end
-  # rubocop:enable AbcSize
+  # rubocop:enable UnneededCopDisableDirective, AbcSize
 end
