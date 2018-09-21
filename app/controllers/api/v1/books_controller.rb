@@ -1,7 +1,9 @@
 module Api
   module V1
     class BooksController < ApiController
+      # rubocop:disable LexicallyScopedActionFilter
       skip_before_action :authenticate_api_v1_user!, only: %i[finding_books search_by_isbn]
+      # rubocop:enable LexicallyScopedActionFilter
 
       def index
         render_paginated Book.all
