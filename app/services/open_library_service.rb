@@ -8,7 +8,7 @@ class OpenLibraryService
     }
     HTTParty.get(
       'https://openlibrary.org/api/books?',
-      :query => query
+      query: query
     )
   end
 end
