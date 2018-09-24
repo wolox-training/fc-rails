@@ -1,0 +1,23 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.btn_find_book_by_isbn').click(function() {
+      $.get('/api/v1/books/search_by_isbn',
+        { isbn: $('#isbn').val()},
+        function(data) {
+          $('#response').val(JSON.stringify(data));
+        }
+      );
+    });
+  });
+</script>
+
+<div>
+  <h1>Consultar libro por ISBN</h1>
+
+  <label for="isbn">ISBN:</label>
+  <input id="isbn" name="isbn" type="text" /><br><br>
+
+  <textarea type="text" id="response"></textarea>
+
+  <button class='btn_find_book_by_isbn'>Buscar libro</button>
+</div>
