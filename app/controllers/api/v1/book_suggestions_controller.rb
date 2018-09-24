@@ -7,8 +7,11 @@ module Api
 
       def create
         book_suggestion = BookSuggestion.new(book_suggestions_create_params)
-        book_suggestion.save!
-        render json: book_suggestion
+        if book_suggestion.save
+          render json: book_suggestion
+        else
+          render json: { errors: book_suggestion.errors }, status: :bad_request
+        end
       end
 
       private
