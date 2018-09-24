@@ -15,7 +15,7 @@ module Api
       end
 
       def index
-        render json: Rent.where(rents_index_params)
+        render_paginated Rent.where(rents_index_params)
       end
 
       private

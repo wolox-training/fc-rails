@@ -2,7 +2,7 @@ module Api
   module V1
     class BooksController < ApiController
       def index
-        render json: Book.all
+        render_paginated Book.all
       end
 
       def show
