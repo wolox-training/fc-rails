@@ -1,6 +1,14 @@
 class OpenLibraryService
   include HTTParty
   def book_info(isbn)
-    HTTParty.get('https://openlibrary.org/api/books?bibkeys=ISBN:' + isbn + '&format=json&jscmd=data')
+    query = {
+      :bibkeys => 'ISBN:' + isbn,
+      :format => 'json',
+      :jscmd => 'data'
+    }
+    HTTParty.get(
+      'https://openlibrary.org/api/books?',
+      :query => query
+    )
   end
 end
