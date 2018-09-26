@@ -91,4 +91,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      port: Rails.application.secrets.mailer_port,
+      address: Rails.application.secrets.mailer_address,
+      domain: Rails.application.secrets.mailer_domain,
+      user_name: Rails.application.secrets.mailer_username,
+      password: Rails.application.secrets.mailer_password,
+      authentication: :cram_md5
+  }
 end
