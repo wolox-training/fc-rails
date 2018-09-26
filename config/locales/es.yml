@@ -4,11 +4,11 @@ es:
     title: 'Detalle de alquiler de libro'
   book:
     details: 'Detalles del libro'
-    gender: 'Genero'
+    gender: 'Género'
     author: 'Autor'
-    title: 'Titulo'
+    title: 'Título'
     publisher: 'Publicado por'
-    year_of_publication: 'Año de publicacion'
+    year_of_publication: 'Año de publicación'
   rent:
     start_date: 'Fecha inicio del alquiler'
     end_date: 'Fecha fin del alquiler'
